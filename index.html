@@ -24,15 +24,15 @@ iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
     const LOGO_IMPRIMVERT = "/images/image2.png";
 
     const communesData = {
-      "Le Bignon": { electeurs: 3192, conseillers: 27, ccCandidats: 5, circulaires: 3352, bulletins: 7022, grandesAffiches: 2, petitesAffiches: 2 },
-      "La Chevrolière": { electeurs: 4931, conseillers: 29, ccCandidats: 9, circulaires: 5178, bulletins: 10848, grandesAffiches: 2, petitesAffiches: 2 },
-      "Geneston": { electeurs: 3031, conseillers: 27, ccCandidats: 5, circulaires: 3183, bulletins: 6668, grandesAffiches: 2, petitesAffiches: 2 },
-      "La Limouzinière": { electeurs: 1857, conseillers: 19, ccCandidats: 4, circulaires: 1950, bulletins: 4085, grandesAffiches: 4, petitesAffiches: 4 },
-      "Montbert": { electeurs: 2534, conseillers: 23, ccCandidats: 5, circulaires: 2661, bulletins: 5575, grandesAffiches: 2, petitesAffiches: 2 },
-      "Pont-Saint-Martin": { electeurs: 5383, conseillers: 29, ccCandidats: 9, circulaires: 5652, bulletins: 11843, grandesAffiches: 12, petitesAffiches: 12 },
-      "Saint-Colomban": { electeurs: 2578, conseillers: 27, ccCandidats: 5, circulaires: 2707, bulletins: 5672, grandesAffiches: 2, petitesAffiches: 2 },
-      "Saint-Lumine-de-Coutais": { electeurs: 1738, conseillers: 19, ccCandidats: 4, circulaires: 1825, bulletins: 3824, grandesAffiches: 4, petitesAffiches: 4 },
-      "Saint-Philbert-de-Grand-Lieu": { electeurs: 7513, conseillers: 29, ccCandidats: 12, circulaires: 7889, bulletins: 16529, grandesAffiches: 12, petitesAffiches: 12 }
+      "Geneston": { electeurs: 3016, conseillers: 27, ccCandidats: 5, circulaires: 3167, bulletins: 6635, grandesAffiches: 2, petitesAffiches: 2 },
+      "La Chevrolière": { electeurs: 4948, conseillers: 29, ccCandidats: 9, circulaires: 5195, bulletins: 10886, grandesAffiches: 2, petitesAffiches: 2 },
+      "La Limouzinière": { electeurs: 1891, conseillers: 19, ccCandidats: 4, circulaires: 1986, bulletins: 4160, grandesAffiches: 4, petitesAffiches: 4 },
+      "Le Bignon": { electeurs: 3227, conseillers: 27, ccCandidats: 5, circulaires: 3388, bulletins: 7099, grandesAffiches: 2, petitesAffiches: 2 },
+      "Montbert": { electeurs: 2563, conseillers: 23, ccCandidats: 5, circulaires: 2691, bulletins: 5639, grandesAffiches: 2, petitesAffiches: 2 },
+      "Pont-Saint-Martin": { electeurs: 5351, conseillers: 29, ccCandidats: 9, circulaires: 5619, bulletins: 11772, grandesAffiches: 12, petitesAffiches: 12 },
+      "Saint-Colomban": { electeurs: 2589, conseillers: 27, ccCandidats: 5, circulaires: 2718, bulletins: 5696, grandesAffiches: 2, petitesAffiches: 2 },
+      "Saint-Lumine-de-Coutais": { electeurs: 1779, conseillers: 19, ccCandidats: 4, circulaires: 1868, bulletins: 3914, grandesAffiches: 4, petitesAffiches: 4 },
+      "Saint-Philbert-de-Grand-Lieu": { electeurs: 7467, conseillers: 29, ccCandidats: 12, circulaires: 7840, bulletins: 16427, grandesAffiches: 12, petitesAffiches: 12 }
     };
 
     const TARIFS = {
@@ -277,7 +277,7 @@ iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
                       <div style={{ background: '#fefce8', borderRadius: '12px', padding: '1rem', marginBottom: '1.5rem', border: '1px solid #fef08a' }}>
                         <p style={{ margin: 0, color: '#854d0e', fontSize: '0.9rem', lineHeight: '1.6' }}>
                           📊 <strong>Données estimatives</strong><br/>
-                          • <strong>Quantités</strong> basées sur les dernières données disponibles — mise à jour après le <strong>16 février 2026</strong> (date limite des listes électorales).<br/>
+                          • <strong>Quantités</strong> <strong>données définitives</strong> actualisées au 16 février 2026 (date de clôture des listes électorales).<br/>
                           • <strong>Tarifs</strong> basés sur les plafonds des dernières élections — seront ajustés sur les <strong>nouveaux plafonds 2026</strong> dès leur publication.
                         </p>
                       </div>
@@ -340,8 +340,8 @@ iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
                           </thead>
                           <tbody>
                             {[
-                              { doc: 'Circulaires A4 R/V', papier: '70g offset PEFC', qty: data.circulaires, tva: '5,5%', ht: remb.circ, ttc: remb.circ * 1.055 },
-                              { doc: `Bulletins ${remb.formatBulletin} ${bulletinCouleur ? '(couleur)' : '(noir)'}`, papier: '70g offset PEFC', qty: data.bulletins, tva: '5,5%', ht: remb.bull, ttc: remb.bull * 1.055 },
+                              { doc: 'Circulaires A4 R/V', papier: '80g offset FSC', qty: data.circulaires, tva: '5,5%', ht: remb.circ, ttc: remb.circ * 1.055 },
+                              { doc: `Bulletins ${remb.formatBulletin} ${bulletinCouleur ? '(couleur)' : '(noir)'}`, papier: '80g offset FSC', qty: data.bulletins, tva: '5,5%', ht: remb.bull, ttc: remb.bull * 1.055 },
                               { doc: 'Affiches A1', papier: '135g dos bleu PEFC', qty: data.grandesAffiches, tva: '20%', ht: remb.affA1, ttc: remb.affA1 * 1.20 },
                               { doc: 'Affiches A3', papier: '130g CB PEFC', qty: data.petitesAffiches, tva: '20%', ht: remb.affA3, ttc: remb.affA3 * 1.20 }
                             ].map((row, i) => (
@@ -508,7 +508,7 @@ iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
                       <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#047857', fontSize: '0.9rem', lineHeight: '1.8' }}>
                         <li>Gestion des déchets dangereux</li>
                         <li>Stockage sécurisé</li>
-                        <li>Papiers certifiés PEFC</li>
+                        <li>Papiers certifiés FSC</li>
                       </ul>
                     </div>
                     <div style={{ background: '#eff6ff', borderRadius: '20px', padding: '1.75rem' }}>
